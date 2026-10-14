@@ -1,0 +1,3 @@
+Uniform crop example: data/raw/2026_doosan_bears_uniform/0001.jpg
+Original: 400 x 400; resized: 256 x 256; center crop: 224 x 224.
+Retained region in original coordinates: (25, 25) to (375, 375).

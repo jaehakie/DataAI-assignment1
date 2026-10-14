@@ -1,0 +1,8 @@
+{
+  "url": "https://jaehakie.github.io/DataAI-assignment1/",
+  "selftest": "self test passed: the browser agrees with Python (largest gap 0.0000)",
+  "selftest_passed": true,
+  "upload_sample": "Doosan 0006",
+  "prediction": "2026_doosan_bears_uniform\n97.6%",
+  "page_errors": []
+}

@@ -1,0 +1,2 @@
+demo: https://jaehakie.github.io/DataAI-assignment1/
+code: https://github.com/jaehakie/DataAI-assignment1

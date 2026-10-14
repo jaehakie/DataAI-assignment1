@@ -1,0 +1,54 @@
+MAS1004 Assignment 1, checking your work
+
+Training images  (C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\data\clean)
+------------------------------------------------------------------------------------------
+  2026_doosan_bears_uniform       86 images
+  2026_hanwha_eagles_uniform      88 images
+  2026_kiwoom_heroes_uniform      93 images
+  2026_lg_twins_uniform          102 images
+
+Your images from a new source  (C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\data\new_images)
+-------------------------------------------------------------------------------------------------------------
+  2026_doosan_bears_uniform        0 images
+  2026_hanwha_eagles_uniform       0 images
+  2026_kiwoom_heroes_uniform       0 images
+  2026_lg_twins_uniform            0 images
+  PROBLEM  "2026_doosan_bears_uniform" has only 0 images, fewer than the 5 this assignment asks for
+
+The same image appearing twice
+------------------------------
+  ok       no file appears twice byte for byte. Near copies (the same picture resized or re-saved) are only found by `python src/clean.py suspects` and `python src/clean.py overlap`.
+
+The model you exported for the web page
+---------------------------------------
+  ok       4 classes: 2026_doosan_bears_uniform, 2026_hanwha_eagles_uniform, 2026_kiwoom_heroes_uniform, 2026_lg_twins_uniform
+  ok       model.onnx is 44.8 MB, 11,178,564 parameters
+           input [1, 3, 224, 224], prepared as: shorter side 256, centre 224 x 224, mean [0.485, 0.456, 0.406], std [0.229, 0.224, 0.225]
+
+Does the exported model give the answers Python gave?
+-----------------------------------------------------
+  ok       yes, they agree (largest gap 0.0000)
+
+Your images from a new source  (C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\data\new_images)
+-------------------------------------------------------------------------------------------------------------
+  warning  "2026_doosan_bears_uniform" has only 0 new images
+  warning  "2026_hanwha_eagles_uniform" has only 0 new images
+  warning  "2026_kiwoom_heroes_uniform" has only 0 new images
+  warning  "2026_lg_twins_uniform" has only 0 new images
+  PROBLEM  no readable images found
+
+Your saved runs on your new images  (C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\data\new_images)
+------------------------------------------------------------------------------------------------------------------
+  run               test accuracy   new images
+
+Summary
+-------
+  2 thing(s) to fix:
+    - "2026_doosan_bears_uniform" has only 0 images, fewer than the 5 this assignment asks for
+    - no readable images found
+  4 thing(s) worth a sentence in your report:
+    - "2026_doosan_bears_uniform" has only 0 new images
+    - "2026_hanwha_eagles_uniform" has only 0 new images
+    - "2026_kiwoom_heroes_uniform" has only 0 new images
+    - "2026_lg_twins_uniform" has only 0 new images
+
