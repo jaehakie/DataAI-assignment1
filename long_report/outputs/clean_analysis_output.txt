@@ -1,0 +1,16 @@
+Clean model: confusion matrix (true rows / predicted columns)
+[[12  1  2  2]
+ [ 0 17  1  0]
+ [ 0  0 19  0]
+ [ 0  1  1 18]]
+Correct: 66/74
+Confident mistakes available: 8
+Train/test accuracy gap: 10.8 percentage points
+1. data/clean/2026_doosan_bears_uniform/0012.jpg: true=2026_doosan_bears_uniform, predicted=2026_kiwoom_heroes_uniform, confidence=0.9929
+2. data/clean/2026_doosan_bears_uniform/0121.jpg: true=2026_doosan_bears_uniform, predicted=2026_kiwoom_heroes_uniform, confidence=0.9010
+3. data/clean/2026_doosan_bears_uniform/0136.jpg: true=2026_doosan_bears_uniform, predicted=2026_lg_twins_uniform, confidence=0.8444
+4. data/clean/2026_lg_twins_uniform/0037.jpg: true=2026_lg_twins_uniform, predicted=2026_kiwoom_heroes_uniform, confidence=0.5648
+5. data/clean/2026_lg_twins_uniform/0102.jpg: true=2026_lg_twins_uniform, predicted=2026_hanwha_eagles_uniform, confidence=0.5226
+6. data/clean/2026_hanwha_eagles_uniform/0126.jpg: true=2026_hanwha_eagles_uniform, predicted=2026_kiwoom_heroes_uniform, confidence=0.4647
+7. data/clean/2026_doosan_bears_uniform/0029.jpg: true=2026_doosan_bears_uniform, predicted=2026_lg_twins_uniform, confidence=0.4622
+8. data/clean/2026_doosan_bears_uniform/0073.jpg: true=2026_doosan_bears_uniform, predicted=2026_hanwha_eagles_uniform, confidence=0.4310

@@ -1,0 +1,32 @@
+reading C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\data\clean
+600 images, 4 classes, read in 9 s
+  2026_doosan_bears_uniform 150
+  2026_hanwha_eagles_uniform 150
+  2026_kiwoom_heroes_uniform 150
+  2026_lg_twins_uniform    150
+training on 480, testing on 120
+model has 11,178,564 parameters, 11,178,564 of them will be trained
+Training device: cpu
+Epoch 1/10: train loss 1.3142, train accuracy 42.9%, test loss 1.4072, test accuracy 30.8%
+Epoch 2/10: train loss 0.8730, train accuracy 68.8%, test loss 1.2872, test accuracy 44.2%
+Epoch 3/10: train loss 0.5657, train accuracy 80.6%, test loss 1.1541, test accuracy 54.2%
+Epoch 4/10: train loss 0.3328, train accuracy 90.8%, test loss 1.1448, test accuracy 57.5%
+Epoch 5/10: train loss 0.2140, train accuracy 94.0%, test loss 1.8850, test accuracy 43.3%
+Epoch 6/10: train loss 0.1080, train accuracy 98.1%, test loss 1.8516, test accuracy 51.7%
+Epoch 7/10: train loss 0.0781, train accuracy 98.3%, test loss 2.4826, test accuracy 45.0%
+Epoch 8/10: train loss 0.0684, train accuracy 98.8%, test loss 1.1496, test accuracy 56.7%
+Epoch 9/10: train loss 0.0353, train accuracy 99.4%, test loss 1.5915, test accuracy 48.3%
+Epoch 10/10: train loss 0.0545, train accuracy 99.4%, test loss 1.2681, test accuracy 53.3%
+
+trained in 8.3 minutes
+train accuracy 99.8%
+test  accuracy 53.3%
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\scratch_curves.png
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\scratch_confusion.png
+worst_examples is not written yet (Problem 5), so there is no scratch_worst.png this time
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\scratch_model.pt
+
+One line for your experiment table:
+| scratch | random | all layers | 10 | 0.0001 | 11,178,564 | 99.8% | 53.3% |
+
+To put this model on your web page: python src/export_web.py --tag scratch

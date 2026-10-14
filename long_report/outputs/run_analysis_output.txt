@@ -1,0 +1,11 @@
+Class order: ['2026_doosan_bears_uniform', '2026_hanwha_eagles_uniform', '2026_kiwoom_heroes_uniform', '2026_lg_twins_uniform']
+Confusion matrix (row=true folder label, column=prediction):
+[[23  1  6  0]
+ [ 0 25  5  0]
+ [ 3  0 27  0]
+ [ 1  0  2 27]]
+Correct test predictions: 102/120
+Incorrect test predictions: 18
+Accuracy gap: 14.8 percentage points
+Most confused pair: 2026_doosan_bears_uniform / 2026_kiwoom_heroes_uniform; total=9
+Directions: 2026_doosan_bears_uniform -> 2026_kiwoom_heroes_uniform: 6; reverse: 3

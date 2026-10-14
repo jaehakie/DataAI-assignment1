@@ -1,0 +1,13 @@
+class                    downloaded  removed   kept  other
+2026_doosan_bears_uniform        150       64     86      0
+2026_hanwha_eagles_uniform        150       62     88      0
+2026_kiwoom_heroes_uniform        150       57     93      0
+2026_lg_twins_uniform           150       48    102      0
+
+reasons
+   115  이전 시즌 유니폼
+    61  유니폼 아닌 사진
+    38  다른 팀 유니폼
+    17  유사·중복 사진 (사용자 확인)
+
+"other" is images that are in data/raw but neither in data/clean nor removed with `clean.py remove`, for example ones you deleted by hand. Their reasons are not recorded.

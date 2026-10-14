@@ -1,0 +1,32 @@
+reading C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\data\clean
+600 images, 4 classes, read in 13 s
+  2026_doosan_bears_uniform 150
+  2026_hanwha_eagles_uniform 150
+  2026_kiwoom_heroes_uniform 150
+  2026_lg_twins_uniform    150
+training on 480, testing on 120
+model has 11,178,564 parameters, 11,178,564 of them will be trained
+Training device: cpu
+Epoch 1/10: train loss 1.0118, train accuracy 59.2%, test loss 0.6822, test accuracy 70.0%
+Epoch 2/10: train loss 0.2197, train accuracy 96.0%, test loss 0.4050, test accuracy 85.0%
+Epoch 3/10: train loss 0.0718, train accuracy 99.4%, test loss 0.3607, test accuracy 85.0%
+Epoch 4/10: train loss 0.0299, train accuracy 99.8%, test loss 0.3850, test accuracy 83.3%
+Epoch 5/10: train loss 0.0251, train accuracy 99.6%, test loss 0.3733, test accuracy 83.3%
+Epoch 6/10: train loss 0.0182, train accuracy 99.6%, test loss 0.3566, test accuracy 82.5%
+Epoch 7/10: train loss 0.0135, train accuracy 99.8%, test loss 0.3519, test accuracy 85.8%
+Epoch 8/10: train loss 0.0092, train accuracy 99.8%, test loss 0.3238, test accuracy 86.7%
+Epoch 9/10: train loss 0.0108, train accuracy 99.8%, test loss 0.3439, test accuracy 86.7%
+Epoch 10/10: train loss 0.0081, train accuracy 99.8%, test loss 0.3461, test accuracy 85.0%
+
+trained in 7.7 minutes
+train accuracy 99.8%
+test  accuracy 85.0%
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\run_curves.png
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\run_confusion.png
+worst_examples is not written yet (Problem 5), so there is no run_worst.png this time
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\run_model.pt
+
+One line for your experiment table:
+| run | ImageNet | all layers | 10 | 0.0001 | 11,178,564 | 99.8% | 85.0% |
+
+To put this model on your web page: python src/export_web.py --tag run

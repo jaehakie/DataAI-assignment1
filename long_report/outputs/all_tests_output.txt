@@ -1,0 +1,13 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.15, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1
+configfile: pytest.ini
+testpaths: tests
+collected 42 items
+
+tests\test_data.py ................                                      [ 38%]
+tests\test_evaluate.py .........                                         [ 59%]
+tests\test_export.py ......                                              [ 73%]
+tests\test_train.py ...........                                          [100%]
+
+============================= 42 passed in 12.06s =============================

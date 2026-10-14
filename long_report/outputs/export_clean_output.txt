@@ -1,0 +1,14 @@
+[torch.onnx] Obtain model graph for `ResNet([...]` with `torch.export.export(..., strict=False)`...
+[torch.onnx] Obtain model graph for `ResNet([...]` with `torch.export.export(..., strict=False)`... ✅
+[torch.onnx] Run decompositions...
+[torch.onnx] Run decompositions... ✅
+[torch.onnx] Translate the graph into ONNX...
+[torch.onnx] Translate the graph into ONNX... ✅
+[torch.onnx] Optimize the ONNX graph...
+[torch.onnx] Optimize the ONNX graph... ✅
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\docs\model.onnx   44.8 MB
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\docs\model.json   2026_doosan_bears_uniform, 2026_hanwha_eagles_uniform, 2026_kiwoom_heroes_uniform, 2026_lg_twins_uniform
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\docs\selftest.json   3 images, ONNX agrees with PyTorch (largest gap 0.000004)
+
+The page now shows the model from the run tagged 'clean' (test accuracy 89.2%).
+Look at it with: python -m http.server -d docs 8000

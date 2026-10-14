@@ -1,0 +1,19 @@
+  duckduckgo stopped at page 1: No results found.
+"2026 Doosan Bears uniform": search returned 384 links, downloading...
+"2026 Doosan Bears uniform": kept 150 images in data\raw\2026_doosan_bears_uniform
+  duckduckgo stopped at page 1: No results found.
+"2026 LG Twins uniform": search returned 340 links, downloading...
+"2026 LG Twins uniform": kept 150 images in data\raw\2026_lg_twins_uniform
+  duckduckgo stopped at page 1: No results found.
+"2026 Hanwha Eagles uniform": search returned 381 links, downloading...
+C:\Users\SEC\Desktop\2026�г⵵ 2�б�\Data&AI\Data&AI-Assignment1\.venv\Lib\site-packages\PIL\Image.py:1136: UserWarning: Palette images with Transparency expressed in bytes should be converted to RGBA images
+  warnings.warn(
+"2026 Hanwha Eagles uniform": kept 150 images in data\raw\2026_hanwha_eagles_uniform
+"2026 Kiwoom Heroes uniform": search returned 450 links, downloading...
+"2026 Kiwoom Heroes uniform": kept 150 images in data\raw\2026_kiwoom_heroes_uniform
+
+Summary
+  2026 Doosan Bears uniform      150
+  2026 LG Twins uniform          150
+  2026 Hanwha Eagles uniform     150
+  2026 Kiwoom Heroes uniform     150

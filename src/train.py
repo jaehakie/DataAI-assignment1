@@ -35,7 +35,17 @@ def build_model(num_classes, pretrained=True, freeze=False):
     Do not put a softmax at the end. The loss function adds it for you, and the
     web page adds it for you.
     """
-    raise NotImplementedError("Problem 3: fill in build_model")
+    from torchvision.models import ResNet18_Weights, resnet18
+
+    if num_classes < 1:
+        raise ValueError("num_classes must be positive")
+    weights = ResNet18_Weights.IMAGENET1K_V1 if pretrained else None
+    model = resnet18(weights=weights)
+    if freeze:
+        for parameter in model.parameters():
+            parameter.requires_grad = False
+    model.fc = nn.Linear(model.fc.in_features, num_classes)
+    return model
 
 
 def train(model, X_train, y_train, X_test, y_test,
@@ -78,7 +88,76 @@ def train(model, X_train, y_train, X_test, y_test,
     The model is trained in place. When this function returns, `model` is the
     trained one, and it is left on the device it was trained on.
     """
-    raise NotImplementedError("Problem 3: fill in train")
+    from torch.utils.data import DataLoader, TensorDataset
+
+    if epochs < 1 or lr <= 0 or batch_size < 1:
+        raise ValueError("epochs, lr, and batch_size must be positive")
+    if not len(y_train) or not len(y_test):
+        raise ValueError("Training and test sets must both contain images")
+    if len(X_train) != len(y_train) or len(X_test) != len(y_test):
+        raise ValueError("Each set must have one label per row")
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+    train_loader = DataLoader(
+        TensorDataset(torch.as_tensor(X_train, dtype=torch.float32),
+                      torch.as_tensor(y_train, dtype=torch.long)),
+        batch_size=batch_size, shuffle=True,
+    )
+    test_loader = DataLoader(
+        TensorDataset(torch.as_tensor(X_test, dtype=torch.float32),
+                      torch.as_tensor(y_test, dtype=torch.long)),
+        batch_size=batch_size, shuffle=False,
+    )
+    criterion = nn.CrossEntropyLoss()
+    optimiser = torch.optim.Adam(
+        [parameter for parameter in model.parameters() if parameter.requires_grad],
+        lr=lr,
+    )
+    history = {key: [] for key in
+               ("train_loss", "train_acc", "test_loss", "test_acc")}
+    print(f"Training device: {device}")
+
+    for epoch in range(epochs):
+        model.train()
+        train_loss, train_correct, train_count = 0.0, 0, 0
+        for inputs, labels in train_loader:
+            inputs, labels = inputs.to(device), labels.to(device)
+            optimiser.zero_grad()
+            logits = model(inputs)
+            loss = criterion(logits, labels)
+            loss.backward()
+            optimiser.step()
+            count = len(labels)
+            train_loss += loss.item() * count
+            train_correct += (logits.argmax(dim=1) == labels).sum().item()
+            train_count += count
+
+        model.eval()
+        test_loss, test_correct, test_count = 0.0, 0, 0
+        with torch.no_grad():
+            for inputs, labels in test_loader:
+                inputs, labels = inputs.to(device), labels.to(device)
+                logits = model(inputs)
+                loss = criterion(logits, labels)
+                count = len(labels)
+                test_loss += loss.item() * count
+                test_correct += (logits.argmax(dim=1) == labels).sum().item()
+                test_count += count
+
+        history["train_loss"].append(train_loss / train_count)
+        history["train_acc"].append(train_correct / train_count)
+        history["test_loss"].append(test_loss / test_count)
+        history["test_acc"].append(test_correct / test_count)
+        print(
+            f"Epoch {epoch + 1}/{epochs}: "
+            f"train loss {history['train_loss'][-1]:.4f}, "
+            f"train accuracy {history['train_acc'][-1]:.1%}, "
+            f"test loss {history['test_loss'][-1]:.4f}, "
+            f"test accuracy {history['test_acc'][-1]:.1%}",
+            flush=True,
+        )
+    return history
 
 
 def count_trainable(model):

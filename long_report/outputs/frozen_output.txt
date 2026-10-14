@@ -1,0 +1,32 @@
+reading C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\data\clean
+600 images, 4 classes, read in 7 s
+  2026_doosan_bears_uniform 150
+  2026_hanwha_eagles_uniform 150
+  2026_kiwoom_heroes_uniform 150
+  2026_lg_twins_uniform    150
+training on 480, testing on 120
+model has 11,178,564 parameters, 2,052 of them will be trained
+Training device: cpu
+Epoch 1/10: train loss 1.3960, train accuracy 29.2%, test loss 1.2642, test accuracy 41.7%
+Epoch 2/10: train loss 1.1243, train accuracy 55.2%, test loss 1.1189, test accuracy 52.5%
+Epoch 3/10: train loss 0.9684, train accuracy 64.4%, test loss 1.0538, test accuracy 58.3%
+Epoch 4/10: train loss 0.8939, train accuracy 65.4%, test loss 0.9239, test accuracy 64.2%
+Epoch 5/10: train loss 0.8086, train accuracy 71.5%, test loss 0.8656, test accuracy 72.5%
+Epoch 6/10: train loss 0.7432, train accuracy 77.7%, test loss 0.8244, test accuracy 71.7%
+Epoch 7/10: train loss 0.7178, train accuracy 77.1%, test loss 0.7911, test accuracy 73.3%
+Epoch 8/10: train loss 0.6858, train accuracy 77.1%, test loss 0.7590, test accuracy 74.2%
+Epoch 9/10: train loss 0.6066, train accuracy 80.6%, test loss 0.7349, test accuracy 75.8%
+Epoch 10/10: train loss 0.6012, train accuracy 82.5%, test loss 0.7177, test accuracy 74.2%
+
+trained in 6.1 minutes
+train accuracy 85.4%
+test  accuracy 74.2%
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\frozen_curves.png
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\frozen_confusion.png
+worst_examples is not written yet (Problem 5), so there is no frozen_worst.png this time
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\frozen_model.pt
+
+One line for your experiment table:
+| frozen | ImageNet | last layer | 10 | 0.001 | 2,052 | 85.4% | 74.2% |
+
+To put this model on your web page: python src/export_web.py --tag frozen

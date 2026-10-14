@@ -1,0 +1,32 @@
+reading C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\data\clean
+600 images, 4 classes, read in 20 s
+  2026_doosan_bears_uniform 150
+  2026_hanwha_eagles_uniform 150
+  2026_kiwoom_heroes_uniform 150
+  2026_lg_twins_uniform    150
+training on 480, testing on 120
+model has 11,178,564 parameters, 11,178,564 of them will be trained
+Training device: cpu
+Epoch 1/10: train loss 1.1980, train accuracy 45.2%, test loss 1.0182, test accuracy 55.8%
+Epoch 2/10: train loss 0.6722, train accuracy 83.5%, test loss 0.7886, test accuracy 75.0%
+Epoch 3/10: train loss 0.4271, train accuracy 95.6%, test loss 0.6457, test accuracy 76.7%
+Epoch 4/10: train loss 0.2508, train accuracy 97.7%, test loss 0.5779, test accuracy 79.2%
+Epoch 5/10: train loss 0.1639, train accuracy 99.0%, test loss 0.5211, test accuracy 80.8%
+Epoch 6/10: train loss 0.1202, train accuracy 99.4%, test loss 0.4913, test accuracy 82.5%
+Epoch 7/10: train loss 0.0850, train accuracy 100.0%, test loss 0.4720, test accuracy 80.8%
+Epoch 8/10: train loss 0.0618, train accuracy 99.8%, test loss 0.4532, test accuracy 81.7%
+Epoch 9/10: train loss 0.0540, train accuracy 99.8%, test loss 0.4450, test accuracy 81.7%
+Epoch 10/10: train loss 0.0384, train accuracy 99.8%, test loss 0.4257, test accuracy 80.8%
+
+trained in 14.1 minutes
+train accuracy 99.8%
+test  accuracy 80.8%
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\low_lr_curves.png
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\low_lr_confusion.png
+worst_examples is not written yet (Problem 5), so there is no low_lr_worst.png this time
+wrote C:\Users\SEC\Desktop\2026학년도 2학기\Data&AI\Data&AI-Assignment1\results\low_lr_model.pt
+
+One line for your experiment table:
+| low_lr | ImageNet | all layers | 10 | 3e-05 | 11,178,564 | 99.8% | 80.8% |
+
+To put this model on your web page: python src/export_web.py --tag low_lr

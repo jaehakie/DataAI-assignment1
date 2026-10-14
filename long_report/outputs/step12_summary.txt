@@ -1,0 +1,7 @@
+Step 12: original 600 images; no files moved.
+Similar-pair candidates: 38; at least one already marked: 12; both remain: 26.
+Top-20 candidate counts (prior user decisions; not removals yet):
+두산: previously marked 11/20, unmarked 9/20
+LG: previously marked 6/20, unmarked 14/20
+한화: previously marked 9/20, unmarked 11/20
+키움: previously marked 15/20, unmarked 5/20
